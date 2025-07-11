@@ -31,3 +31,18 @@ build/
 
 ### VS Code ###
 .vscode/
+# Ignorer les dossiers temporaires générés avec des noms UUID
+**/*.lck
+**/0a4*/ 
+**/2a0*/ 
+**/2f0*/ 
+**/03b*/ 
+**/3c5*/ 
+**/3f4*/ 
+**/5ee*/ 
+**/7a7*/ 
+**/7ba*/ 
+**/7bc*/ 
+**/8c5*/ 
+**/30e*/ 
+**/40c*/
