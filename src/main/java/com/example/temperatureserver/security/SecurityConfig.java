@@ -37,6 +37,7 @@ public class SecurityConfig {
                 .requestMatchers("/history/**").permitAll()
                 .requestMatchers("/reservation/**").permitAll()
                 .requestMatchers("/api/user-info/**").permitAll()
+                .requestMatchers("/api/insights/**").permitAll()
                 .anyRequest().authenticated()
             )
             .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);

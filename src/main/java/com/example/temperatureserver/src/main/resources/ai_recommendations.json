@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    {
+      "space": "Bureau privé 1",
+      "message": "Température trop haute, refroidir la pièce."
+    },
+    {
+      "space": "Cabine téléphonique 1",
+      "message": "✅ Les conditions actuelles dans cet espace sont idéales, garantissant un confort optimal."
+    },
+    {
+      "space": "Espace créatif 1",
+      "message": "✅ Les conditions actuelles dans cet espace sont idéales, garantissant un confort optimal."
+    },
+    {
+      "space": "Espace ouvert Central",
+      "message": "Sur-occupation, réduire le nombre de personnes."
+    },
+    {
+      "space": "Salle de présentation Principale",
+      "message": "✅ Les conditions actuelles dans cet espace sont idéales, garantissant un confort optimal."
+    },
+    {
+      "space": "Salle de réunion A",
+      "message": "Éclairage insuffisant, augmenter la luminosité."
+    },
+    {
+      "space": "Salon détente Principal",
+      "message": "✅ Les conditions actuelles dans cet espace sont idéales, garantissant un confort optimal."
+    }
+  ]
+}

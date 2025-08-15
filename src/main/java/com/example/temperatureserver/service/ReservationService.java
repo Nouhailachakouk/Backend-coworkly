@@ -1,12 +1,14 @@
 package com.example.temperatureserver.service;
 
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import com.example.temperatureserver.model.Reservation;
 import com.example.temperatureserver.model.Space;
 import com.example.temperatureserver.repository.ReservationRepository;
 import com.example.temperatureserver.repository.SpaceRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ReservationService {
@@ -18,7 +20,7 @@ public class ReservationService {
         this.reservationRepository = reservationRepository;
         this.spaceRepository = spaceRepository;
     }
-
+    @Transactional
     public Reservation createReservation(Reservation reservation) {
         if (reservation.getSpaceType() == null || reservation.getSpaceType().isEmpty()) {
             throw new IllegalArgumentException("Le champ spaceType est obligatoire.");

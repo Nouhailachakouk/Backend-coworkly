@@ -1,0 +1,64 @@
+{
+  "recommendations": [
+    {
+      "title": "Température hors plage (23.8°C ; cible 19-22°C) — Bureau privé 1",
+      "description": "Ajuster le chauffage/climatisation pour revenir dans la plage cible.",
+      "priority": "Priorité haute",
+      "impact": " amélioration du confort thermique et de la satisfaction."
+    },
+    {
+      "title": "Conditions stables — Cabine téléphonique 1",
+      "description": "Les indicateurs sont dans les plages optimales. Continuer la surveillance.",
+      "priority": "Priorité faible",
+      "impact": " maintien du confort et de la productivité."
+    },
+    {
+      "title": "Conditions stables — Espace créatif 1",
+      "description": "Les indicateurs sont dans les plages optimales. Continuer la surveillance.",
+      "priority": "Priorité faible",
+      "impact": " maintien du confort et de la productivité."
+    },
+    {
+      "title": "Sur-occupation (30/30) — Espace ouvert Central",
+      "description": "Limiter le nombre de personnes ou répartir vers un autre espace.",
+      "priority": "Priorité moyenne",
+      "impact": "-2.400000000000002% de bruit et meilleure sécurité."
+    },
+    {
+      "title": "Conditions stables — Salle de présentation Principale",
+      "description": "Les indicateurs sont dans les plages optimales. Continuer la surveillance.",
+      "priority": "Priorité faible",
+      "impact": " maintien du confort et de la productivité."
+    },
+    {
+      "title": "Luminosité à ajuster (415 lx ; cible 500-1000 lx) — Salle de réunion A",
+      "description": "Adapter l’éclairage (intensité/points lumineux supplémentaires).",
+      "priority": "Priorité moyenne",
+      "impact": " baisse de la fatigue visuelle et augmente la productivité."
+    },
+    {
+      "title": "Conditions stables — Salon détente Principal",
+      "description": "Les indicateurs sont dans les plages optimales. Continuer la surveillance.",
+      "priority": "Priorité faible",
+      "impact": " maintien du confort et de la productivité."
+    },
+    {
+      "title": "Optimisation des créneaux",
+      "description": "Le Vendredi présente la plus forte demande (10 réservations, ~51.5% au-dessus de la moyenne). Envisager l’ouverture d’un espace supplémentaire.",
+      "priority": "Priorité haute",
+      "impact": " +51% de capacité absorbée"
+    },
+    {
+      "title": "Amélioration de l’expérience",
+      "description": "Forte préférence déclarée pour : Prises électriques. Prioriser cet équipement dans les espaces ouverts et salles à forte fréquentation.",
+      "priority": "Priorité moyenne",
+      "impact": " +0.2 à +0.4 sur l’indice de satisfaction."
+    }
+  ],
+  "stats": {
+    "most_demand_day": "Vendredi",
+    "most_demand_day_delta_pct": 51.5,
+    "top_equipment": "Prises électriques",
+    "generated_at": "2025-08-15T12:10:54.077736Z"
+  }
+}
