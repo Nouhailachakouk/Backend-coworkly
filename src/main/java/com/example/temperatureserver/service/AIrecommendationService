@@ -1,0 +1,57 @@
+
+package com.example.temperatureserver.service;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@Service
+public class AIRecommendationService {
+    
+    private static final Logger logger = LoggerFactory.getLogger(AIRecommendationService.class);
+    private static final String JSON_PATH = "ai_recommendations.json";
+    @Transactional(readOnly = true)
+    public Map<String, Object> getRecommendationsFromFile() {
+        try {
+            Path path = Paths.get(JSON_PATH);
+            
+            // Check if file exists
+            if (!Files.exists(path)) {
+                logger.warn("AI recommendations file not found at: {}", path.toAbsolutePath());
+                return Map.of("recommendations", List.of(), "error", "File not found");
+            }
+            
+            String json = Files.readString(path, StandardCharsets.UTF_8);
+            ObjectMapper mapper = new ObjectMapper();
+            
+            Map<String, Object> result = mapper.readValue(json, Map.class);
+            logger.info("Successfully loaded {} recommendations", 
+                       ((List<?>) result.getOrDefault("recommendations", List.of())).size());
+            
+            return result;
+            
+        } catch (IOException e) {
+            logger.error("Error reading AI recommendations file: {}", e.getMessage());
+            return Map.of(
+                "recommendations", List.of(),
+                "error", "Failed to read recommendations: " + e.getMessage()
+            );
+        } catch (Exception e) {
+            logger.error("Unexpected error loading AI recommendations: {}", e.getMessage());
+            return Map.of(
+                "recommendations", List.of(),
+                "error", "Unexpected error: " + e.getMessage()
+            );
+        }
+    }
+}
